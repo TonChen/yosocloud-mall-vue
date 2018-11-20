@@ -9,7 +9,10 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 设置代理模式
+    proxyTable: {
+
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -43,11 +46,12 @@ module.exports = {
   },
 
   build: {
-    // Template for index.html
+    // 资源构建打包输出的入口文件
     index: path.resolve(__dirname, '../dist/index.html'),
 
-    // Paths
+    // 资源构建打包输出的本地路径
     assetsRoot: path.resolve(__dirname, '../dist'),
+    // 这是将静态资源打包到指定的文件夹下
     assetsSubDirectory: 'static',
 
     /**
@@ -56,6 +60,7 @@ module.exports = {
      * for example GitHub pages. If you plan to deploy your site to https://foo.github.io/bar/,
      * then assetsPublicPath should be set to "/bar/".
      * In most cases please use '/' !!!
+     * 静态资源的路径,如果资源服务器和web服务器不在同一台机器，修改这里,e.g. //static.demo.com/
      */
     assetsPublicPath: '/',
 
